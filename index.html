@@ -26,11 +26,6 @@
     <li><a href="#contact" class="nav-cta">Contacto</a></li>
   </ul>
 
-  <!--
-    Ícono hamburguesa — se muestra solo en mobile (< 768px)
-    onclick="toggleMenu()" llama a la función en script.js
-    Los 3 <span> son las 3 rayitas del ícono
-  -->
   <div class="hamburger" onclick="toggleMenu()">
     <span></span>
     <span></span>
@@ -43,7 +38,7 @@
   <div class="hero-grid"></div>
   <div class="hero-content">
 
-    <div class="hero-badge">Analista de Datos · Deltacom SA</div>
+    <div class="hero-badge">Analista de Datos</div>
 
     <h1 class="hero-name">Aldana<br><em>Avila</em></h1>
 
@@ -98,7 +93,7 @@
         </div>
       </div>
 
-      <div class="about-floating">💼 DELTACOM SA · Actual</div>
+      <div class="about-floating">💼 Open to work    </div>
     </div>
 
     <div class="about-text reveal">
@@ -107,11 +102,11 @@
 
       <div class="divider"></div>
 
-      <p>
-        Soy <strong>Analista de Datos, Logística y RRHH</strong> en DELTACOM SA,
-        donde desarrollo dashboards, automatizo reportes y genero KPIs operativos
-        para la toma de decisiones gerencial. Estudio
-        <strong>Desarrollo de Software en UADE</strong>.
+      <p> 
+        Soy <strong>Analista de Datos especializada en Logística y RRHH</strong>, 
+        orientado al desarrollo de dashboards, automatización de reportes y 
+        generación de KPIs clave para la toma de decisiones gerencial. Estudio 
+        <strong>Desarrollo de Software en UADE</strong>. 
       </p>
       <p>
         Mi experiencia abarca análisis de costos, gestión de datos en TMS,
@@ -300,20 +295,11 @@
   </div>
 </section>
 
-
-<!-- ─────────────────────────────────────────────
-  IMPORTANTE: si agregás un proyecto nuevo en el HTML,
-  también tenés que agregarlo en el objeto projects del JS
-───────────────────────────────────────────────── -->
 <section id="projects">
   <div class="section-label reveal">Proyectos</div>
   <h2 class="section-title reveal">Trabajo aplicado</h2>
   <p class="section-sub reveal">Dashboards, análisis y modelos construidos sobre casos de negocio reales.</p>
 
-  <!--
-    Botones de filtro — el onclick pasa la categoría al JS
-    "all" muestra todo, "bi", "sql", "auto" filtran por data-cat
-  -->
   <div class="projects-filter reveal">
     <button class="filter-btn active" onclick="filterProjects('all', this)">Todos</button>
     <button class="filter-btn" onclick="filterProjects('bi', this)">BI & Dashboards</button>
@@ -621,13 +607,6 @@
   </div>
 </section>
 
-
-<!-- ─────────────────────────────────────────────
-  CONTACT — Sección de contacto
-  Fondo oscuro (--navy). Grilla de 2 columnas:
-  izquierda: links de contacto
-  derecha: formulario (el envío lo maneja JS con sendForm())
-───────────────────────────────────────────────── -->
 <section id="contact">
   <div class="contact-single-col">
 
@@ -639,7 +618,6 @@
 
     <div class="contact-row reveal">
 
-      <!-- Cada .contact-link es un botón/link clickeable -->
       <a href="mailto:aldana.avilaa416@gmail.com" class="contact-link">
         <div class="contact-link-icon">✉️</div>
         <div class="contact-link-text">
@@ -648,7 +626,6 @@
         </div>
       </a>
 
-      <!-- Reemplazá con tu URL real de LinkedIn -->
       <a href="https://www.linkedin.com/in/aldana-avila-43b724203/" target="_blank" class="contact-link">
         <div class="contact-link-icon">💼</div>
         <div class="contact-link-text">
@@ -657,7 +634,6 @@
         </div>
       </a>
 
-      <!-- Deriva directo a WhatsApp -->
       <a href="https://wa.me/5491130283995" target="_blank" class="contact-link">
         <div class="contact-link-icon">📱</div>
         <div class="contact-link-text">
@@ -684,22 +660,14 @@
 </footer>
 
 
-<!-- ─────────────────────────────────────────────
-  MODAL — Ventana emergente de detalles de proyecto
-  El HTML de adentro se genera dinámicamente por JS (openModal)
-  No tocás este HTML — editá los datos en script.js
-───────────────────────────────────────────────── -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
   <div class="modal" id="modal">
-    <!-- El JS escribe acá el header del proyecto -->
     <div class="modal-header" id="modalHeader"></div>
-    <!-- El JS escribe acá el cuerpo del proyecto -->
     <div class="modal-body" id="modalBody"></div>
   </div>
 </div>
 
 
-<!-- Conecta este HTML con el archivo de JavaScript -->
 <script src="script.js"></script>
 
 </body>

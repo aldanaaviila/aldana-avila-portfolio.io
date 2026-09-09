@@ -1,18 +1,3 @@
-
-/* ==========================================================
-   PORTFOLIO — ALDANA AVILA
-   Archivo: script.js
-   Descripción: Toda la interactividad del portfolio.
-
-   CONTENIDO:
-   1. NAV    → sombra al hacer scroll + menú hamburguesa
-   2. REVEAL → animación de aparición al hacer scroll
-   3. FILTER → filtro de proyectos por categoría
-   4. MODAL  → ventana emergente con detalles de proyectos
-   5. FORM   → validación y envío del formulario
-========================================================== */
-
-
 /* ──────────────────────────────────────────────
    1. NAV — Barra de navegación
 ────────────────────────────────────────────────*/
@@ -228,7 +213,7 @@ const projects = {
 
   p3: {
     emoji: '🫔',
-    image: 'images/dashboard-empandas.png',
+    image: "images/dashboard-empanadas.png",
     color: 'linear-gradient(135deg,#3D52A0,#8697C4)',
     title: 'Dashboard de Emprendimiento — Empanadas',
     problem: 'Emprendimiento gastronómico sin visibilidad sobre sus números: sin forma de saber qué productos eran más rentables, cuándo vendía más ni si los costos crecían.',
@@ -487,12 +472,6 @@ document.addEventListener('keydown', e => {
 
 /* ──────────────────────────────────────────────
    5. FORM — Formulario de contacto
-   
-   NOTA: este formulario actualmente solo hace validación visual.
-   Para que envíe emails reales, podés usar Formspree:
-   1. Creá una cuenta en formspree.io
-   2. Creá un formulario y copiá el endpoint
-   3. Reemplazá el fetch de abajo con el endpoint de Formspree
 ────────────────────────────────────────────────*/
 
 /*
@@ -501,7 +480,6 @@ document.addEventListener('keydown', e => {
 */
 function sendForm() {
   // Leer los valores de los campos
-  // .trim() quita espacios en blanco al inicio y al final
   const nombre = document.getElementById('fName').value.trim();
   const email  = document.getElementById('fEmail').value.trim();
   const msg    = document.getElementById('fMsg').value.trim();
@@ -509,23 +487,9 @@ function sendForm() {
   // Validar que todos los campos estén completos
   if (!nombre || !email || !msg) {
     alert('Por favor completá todos los campos.');
-    return; // salir de la función sin hacer nada más
+    return; 
   }
 
-  /*
-    Simular el envío: ocultar el form y mostrar el mensaje de éxito.
-   
-    Para conectar con Formspree (envío real), reemplazá por:
-   
-    fetch('https://formspree.io/f/TU_ID', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nombre, email, msg })
-    }).then(() => {
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-    });
-  */
   document.getElementById('contactForm').style.display = 'none';
   document.getElementById('formSuccess').style.display = 'block';
 }
