@@ -2,7 +2,7 @@
 
 Portfolio personal de Data Analyst. Sitio web con mi presentación profesional, stack técnico, proyectos aplicados y línea de tiempo de mi trayectoria.
 
-🔗 **Ver sitio en vivo:** https://github.com/aldanaaviila/mi-portfolio
+🔗 **Ver sitio en vivo:** https://aldanaaviila.github.io/aldana-avila-portfolio.io/
 
 ## Sobre el proyecto
 
